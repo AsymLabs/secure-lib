@@ -51,15 +51,15 @@ Examples
 
 You can invoke the safe association as follows:  
   
->[webdev@a52j lib]$ source secure-lib  
->[webdev@a52j lib]$  
+>[user@a52j lib]$ source secure-lib  
+>[user@a52j lib]$  
 >  
->[webdev@a52j lib]$ ${safe[grep]} 'secure' secure-lib.md  
+>[user@a52j lib]$ ${safe[grep]} 'secure' secure-lib.md  
 >secure-lib  
 >The Bash library `secure-lib` can be used to help harden Bash scripts against  
 >`secure-lib` provides the association `safe[]`.  For example grep may be  
 >`secure-lib` was inspired in part by the excellent *Bash Cookbook, Albing,  
->[webdev@a52j lib]$  
+>[user@a52j lib]$  
 
 Terms
 =====
