@@ -1,0 +1,129 @@
+#!/usr/bin/env bash
+#
+# secure-lib : insert this source when a script needs to be secured - say in
+# the case where it is used for public network or web servers.  Much of this 
+# file is based upon recommended practice in the 'Bash Cookbook', Albing,
+# Vossen and Newham, O'reilly, 2007 - an excellent book.
+#
+# The purpose of this file is to place security features on a script that needs
+# to be used in a application.  This includes the basic bash settings and basic
+# binary tools path settings.
+#
+# Application tools such as 'bc' or 'xelatex' may be better handled individually
+# on an as-needed basis.  In any case for a secure environment the full path to
+# the binary should be used eg for 'latex' use '/usr/bin/latex'.
+#
+# To assist in these matters, a safe map is constructed.  This safe map can be
+# as follows:  ${safe[grep]} 'four score' gettysburgaddress.txt
+#
+# Usage:    source /path/to/secure-lib
+#
+# Output:   (none)
+# 
+# Copyright (C) Applied Numerics Ltd 2013 under the brand name AsymLabs (TM) 
+# and published under the terms of the MIT license.  Although we have not 
+# yet encountered any issues, there is no warrany of any type given so you 
+# must use it at your own risk.  You have been warned.
+#
+# Comments are welcomed and may be forwarded to the author at:
+#
+#           mailto:dv@angb.co
+#
+
+# Created by G R Summers Fri 27 Sep 2013 11:30:11 BST
+# Updated by G R Summers Tue 01 Oct 2013 18:57:15 BST  
+
+# Secure environment (web server or public network use).  For secure use, do 
+# not append the PATH variable; instead trim the PATH to the absolute minimum.
+# The PATH below is considered the minimum that most applications will need,
+# but it can be tightned up further - for the truly paranoid try 'unset PATH'.
+#
+# These settings are based upon those recommended in the 'Bash Cookbook', Albing,
+# Vossen and Newham, O'reilly, 2007.
+export PATH='/bin:/usr/bin:/usr/local/bin'
+\unalias -a
+hash -r
+ulimit -H -c 0 --
+IFS=$' \t\n'
+umask 002
+
+# Binary tools association.  This would be set according to where the operating
+# system keeps common binary tools such as cp, rm, grep, sed, awk, etc.  For   
+# example, many Linux systems have these tools located at '/bin', whereas other
+# systems such as the Mac may use something else.  We use '/bin by default'.
+
+# Binary tools directory.
+bintooldir='/bin'
+
+# Bintools of interest.  For example, accessing the tool 'sed' would be done 
+# by ${safe[sed]}.  No doubt this would be used by the truly paranoid. Otherwise
+# the above PATH should be sufficient for most applications.
+
+# Binary tools.  The default tools can be used to alter the filesystem by re-
+# directing stdout or stdin, but otherwise they can be considered safer than 
+# the list that follows.
+readonly bintools=( 
+    awk
+    basename
+    cat 
+    date
+    egrep
+    fgrep
+    find
+    gawk
+    grep
+    gunzip
+    gzip
+    ls
+    more
+    ping
+    ps
+    pwd
+    readlink
+    sed
+    tar
+    touch
+    uname
+    zcat
+)
+
+# These are filesystem tools with dangerous side effects.  They should be added
+# to the above list with great care. 
+#   chgrp
+#   chmod
+#   chown
+#   cp
+#   mkdir
+#   mv
+#   rm
+#   rmdir
+#   su
+
+# Build binary tools safe associations.  Usage:
+#
+#   ${safe[grep]} -q 'four score' gettysburgaddress.txt
+#
+declare -A safe
+for tool in ${bintools[@]}
+do
+    safe["$tool"]="$bintooldir"/"$tool"
+done
+
+# More safe associations.  You can add customized safe associations here - by
+# using a custom directory and adding more to the safe array - which can be ex-
+# tended as needed.  The following is an example only and will vary according 
+# to needs.
+#
+# readonly mytooldir='/usr/bin'
+# readonly mytools=(
+#    latex
+#    latexmk
+#    pdflatex
+#    xeltex
+# )
+# for tool in ${mytools[@]}
+# do
+#     safe["$tool"]="$mytooldir"/"$tool"
+# done
+
+# End secure-lib
