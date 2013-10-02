@@ -32,14 +32,14 @@
       <section>
         <div id="title">
           <h1>Secure-lib</h1>
-          <p>A rough attempt to secure a Bash script for the seriously paranoid.</p>
+          <p>A rough attempt to secure a Bash script for the truely paranoid.</p>
           <hr>
           <span class="credits left">Project maintained by <a href="https://github.com/AsymLabs">AsymLabs</a></span>
           <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
         </div>
 
         <h1>
-<a name="secure-lib" class="anchor" href="#secure-lib"><span class="octicon octicon-link"></span></a>secure-lib</h1>
+<a name="introduction" class="anchor" href="#introduction"><span class="octicon octicon-link"></span></a>Introduction</h1>
 
 <p>The Bash library <code>secure-lib</code> can be used to help harden Bash scripts against
 malicious use.  For most purposes this would not be needed but in the case a 
@@ -55,16 +55,16 @@ extended depending upon specific needs.  </p>
 <p><code>secure-lib</code> was inspired in part by the excellent <em>Bash Cookbook, Albing,
 Vossen and Newham, O'reilly, 2007</em>.  </p>
 
-<h1>
-<a name="motivation" class="anchor" href="#motivation"><span class="octicon octicon-link"></span></a>Motivation</h1>
+<h3>
+<a name="motivation" class="anchor" href="#motivation"><span class="octicon octicon-link"></span></a>Motivation</h3>
 
 <p>Bash can introduce security risks within public system.   Often breaches
 are specific to the PATH variable and alias. Malicious software is easily 
 accessed within a user area by modification of the PATH variable.  This library
 attempts to isolate some of those risks - and provide additional safeguards.  </p>
 
-<h1>
-<a name="dependencies" class="anchor" href="#dependencies"><span class="octicon octicon-link"></span></a>Dependencies</h1>
+<h3>
+<a name="dependencies" class="anchor" href="#dependencies"><span class="octicon octicon-link"></span></a>Dependencies</h3>
 
 <p>Bash 4+ and nothing else.  For earlier versions, there are workarounds for 
 associations (key value maps) but we leave this as an exercise for others.   </p>
