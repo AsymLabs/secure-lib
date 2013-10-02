@@ -4,7 +4,7 @@ secure-lib
 The Bash library `secure-lib` can be used to help harden Bash scripts against
 malicious use.  For most purposes this would not be needed but in the case a 
 script is used on a public network or as a cgi file then it may be justified.
-Of couse if one is also truly paranoid it may be of interest too.  
+Of course if one is also truly paranoid it may be of interest too.  
   
 Generally it is considered good security practice when using binary tools to
 provide the full path to the binary when invoked.  To facilitate this action,
@@ -18,7 +18,7 @@ Vossen and Newham, O'reilly, 2007*.
 Motivation
 ==========
 
-Bash can introduce security risks within public system.  Most common breaches
+Bash can introduce security risks within public system.  Often breaches
 are specific to the PATH variable and alias. Malicious software is easily 
 accessed within a user area by modification of the PATH variable.  This library
 attempts to isolate some of those risks - and provide additional safeguards.  
