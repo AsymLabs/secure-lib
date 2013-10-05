@@ -1,43 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Secure-lib by AsymLabs</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Secure-lib : A rough attempt to secure a Bash script for the seriously paranoid." />
 
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Secure-lib</title>
   </head>
+
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/AsymLabs/secure-lib">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/AsymLabs/secure-lib/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/AsymLabs/secure-lib/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
 
-    <div class="wrapper">
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/AsymLabs/secure-lib">View on GitHub</a>
 
-      <section>
-        <div id="title">
-          <h1>Secure-lib</h1>
-          <p>A rough attempt to secure a Bash script for the seriously paranoid.</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/AsymLabs">AsymLabs</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
+          <h1 id="project_title">Secure-lib</h1>
+          <h2 id="project_tagline">A rough attempt to secure a Bash script for the seriously paranoid.</h2>
 
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/AsymLabs/secure-lib/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/AsymLabs/secure-lib/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h1>
 <a name="introduction" class="anchor" href="#introduction"><span class="octicon octicon-link"></span></a>Introduction</h1>
 
@@ -52,8 +45,8 @@ provide the full path to the binary when invoked.  To facilitate this action,
 called with a full path by invoking <code>${safe[grep]}</code>.  This association can be
 extended depending upon specific needs.  </p>
 
-<p><code>secure-lib</code> was inspired in part by the excellent <em>Bash Cookbook, Albing,
-Vossen and Newham, O'reilly, 2007</em>.  </p>
+<p><code>secure-lib</code> was inspired in part by the excellent <a href="http://bashcookbook.com/">Bash Cookbook (Albing,
+Vossen and Newham)</a>.  </p>
 
 <h3>
 <a name="motivation" class="anchor" href="#motivation"><span class="octicon octicon-link"></span></a>Motivation</h3>
@@ -117,11 +110,19 @@ type given so you must use it at your own risk.  </p>
 
 <p>We hope that you find this Bash library to be of value.  Should you have any
 comments or suggestions for improvement please let us know at
-dv@angb.co.  </p>
+<a href="mailto:dv@angb.co">dv@angb.co</a>.  </p>
       </section>
-
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Secure-lib maintained by <a href="https://github.com/AsymLabs">AsymLabs</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
     
+
   </body>
 </html>
