@@ -12,8 +12,8 @@ provide the full path to the binary when invoked.  To facilitate this action,
 called with a full path by invoking `${safe[grep]}`.  This association can be
 extended depending upon specific needs.  
   
-`secure-lib` was inspired in part by the excellent *Bash Cookbook, Albing,
-Vossen and Newham, O'reilly, 2007*.  
+`secure-lib` was inspired in part by the excellent [Bash Cookbook (Albing,
+Vossen and Newham)](http://bashcookbook.com/).  
 
 Motivation
 ==========
