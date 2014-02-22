@@ -66,8 +66,8 @@ Terms
 
 We offer this to the community for free and you may use it as you wish.  
   
-This source is Copyright (C) Applied Numerics Ltd 2013 Great Britain under the
-brand name AsymLabs (TM) and is provided to the community under the MIT license.
+This source is Copyright (C) Applied Numerics Ltd Great Britain 2013-2014 under
+the brand AsymLabs (TM) and is provided to the community under the MIT license.
 Although we have not yet encountered any issues, there is no warranty of any
 type given so you must use it at your own risk.  
 
