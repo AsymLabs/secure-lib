@@ -55,7 +55,7 @@ You can invoke the safe association as follows:
 >[user@a52j lib]$  
 >  
 >[user@a52j lib]$ ${safe[grep]} 'secure' README.md  
->secure-lib 
+>secure-lib  
 >The Bash library \`secure-lib\` can be used to help harden Bash scripts against  
 >\`secure-lib\` provides the association \`safe[]\`.  For example grep may be  
 >\`secure-lib\` was inspired in part by the excellent \[Bash Cookbook, \(Albing,  
