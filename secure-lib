@@ -20,9 +20,9 @@
 #
 # Output:   (none)
 # 
-# Copyright (C) Applied Numerics Ltd 2013 under the brand name AsymLabs (TM) 
-# and published under the terms of the MIT license.  Although we have not 
-# yet encountered any issues, there is no warrany of any type given so you 
+# Copyright (C) Applied Numerics Ltd 2013-2014 under the brand name AsymLabs
+# (TM) and published under the terms of the MIT license.  Although we have not
+# yet encountered any issues, there is no warrany of any type given so you
 # must use it at your own risk.  You have been warned.
 #
 # Comments are welcomed and may be forwarded to the author at:
@@ -31,7 +31,7 @@
 #
 
 # Created by G R Summers Fri 27 Sep 2013 11:30:11 BST
-# Updated by G R Summers Tue 01 Oct 2013 18:57:15 BST  
+# Updated by G R Summers Fri 12 Sep 2014 09:09:27 BST  
 
 # Secure environment (web server or public network use).  For secure use, do 
 # not append the PATH variable; instead trim the PATH to the absolute minimum.
